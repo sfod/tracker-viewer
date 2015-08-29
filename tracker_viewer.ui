@@ -32,7 +32,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="urlLineEdit"/>
      </item>
      <item>
       <widget class="QPushButton" name="requestButton">
@@ -77,5 +77,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>urlLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>requestButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>88</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

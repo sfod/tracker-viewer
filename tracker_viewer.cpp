@@ -4,17 +4,22 @@
 
 TrackerViewer::TrackerViewer(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::TrackerViewer)
+    ui_(new Ui::TrackerViewer), url_()
 {
-    ui->setupUi(this);
+    ui_->setupUi(this);
 }
 
 TrackerViewer::~TrackerViewer()
 {
-    delete ui;
+    delete ui_;
+}
+
+void TrackerViewer::on_urlLineEdit_textChanged(const QString &url)
+{
+    url_ = url;
 }
 
 void TrackerViewer::on_requestButton_clicked()
 {
-    qDebug() << "request sent";
+    qDebug() << "requested URL" << url_;
 }

@@ -15,10 +15,12 @@ public:
     ~TrackerViewer();
 
 private slots:
+    void on_urlLineEdit_textChanged(const QString &url);
     void on_requestButton_clicked();
 
 private:
-    Ui::TrackerViewer *ui;
+    Ui::TrackerViewer *ui_;
+    QString url_;
 };
 
 #endif // MAINWINDOW_HPP
