@@ -2,6 +2,8 @@
 #define MAINWINDOW_HPP
 
 #include <QMainWindow>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 namespace Ui {
 class TrackerViewer;
@@ -17,10 +19,14 @@ public:
 private slots:
     void on_urlLineEdit_textChanged(const QString &url);
     void on_requestButton_clicked();
+    void http_ready();
+    void http_finished();
 
 private:
     Ui::TrackerViewer *ui_;
     QString url_;
+    QNetworkAccessManager nam_;
+    QNetworkReply *reply_;
 };
 
 #endif // MAINWINDOW_HPP
