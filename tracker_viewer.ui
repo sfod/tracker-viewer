@@ -35,9 +35,9 @@
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="requestButton">
        <property name="text">
-        <string>Send</string>
+        <string>Request</string>
        </property>
       </widget>
      </item>
